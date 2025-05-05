@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}<title>Login</title>{% endblock %}
+
+{% block content %}
+<style>
+    body {
+    background: linear-gradient(135deg, #d0f0c0, #e0ffe0);
+    }
+  
+    .login-box {
+      max-width: 450px;
+      margin: 4rem auto;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+    }
+  
+    .login-box h1 {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+  
+    .form-control:focus {
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+  
+    .btn-login {
+      font-size: 1rem;
+      padding: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .btn-login:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+  
+
+<div class="container animate__animated animate__fadeIn">
+    <div class="login-box">
+        <h1 class="text-center mb-4">🔐 Login</h1>
+
+        <form action="index.html" method="get">
+            <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter your email"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label fw-semibold">Password</label>
+                <input type="password" class="form-control form-control-lg" id="password"
+                    placeholder="Enter your password" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-login">Login</button>
+            </div>
+        </form>
+
+        <p class="text-center mt-4 text-muted">Don't have an account?
+            <a href="{% url 'register' %}" class="text-primary fw-semibold">Sign up here</a>.
+        </p>
+
+    </div>
+</div>
+{% endblock %}

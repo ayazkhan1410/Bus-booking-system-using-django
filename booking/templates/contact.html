@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}
+<title>
+  Contact Us
+</title>
+{% endblock %}
+
+{% block content %}
+<style>
+  .contact-card {
+    max-width: 600px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    /* top-bottom and sides */
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .container:first-child {
+    margin-top: 0 !important;
+  }
+
+  .navbar {
+    margin-bottom: 0 !important;
+  }
+</style>
+
+<!-- Contact Section -->
+<main class="container py-0">
+
+<div class="container py-1">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="contact-card">
+
+        <h2 class="text-center text-primary fw-bold mb-3">Contact Us</h2>
+        <p class="text-center text-muted mb-4">
+          We'd love to hear from you! Fill out the form below, and we'll get back to you shortly.
+        </p>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Name</label>
+            <input type="text" class="form-control rounded-3" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-3" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold">Message</label>
+            <textarea class="form-control rounded-3" id="message" rows="5" placeholder="Your Message"
+              required></textarea>
+          </div>
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+{% endblock %}

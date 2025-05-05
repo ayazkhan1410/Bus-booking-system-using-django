@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}<title>Search Results</title>{% endblock %}
+
+{% block content %}
+<style>
+  .bus-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+  }
+
+  .bus-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 128, 0, 0.2);
+  }
+
+  .bus-header {
+    background: linear-gradient(45deg, #198754, #28a745);
+    color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+  }
+
+  .bus-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .bus-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  .bus-icon {
+    color: #198754;
+    font-size: 1.2rem;
+    margin-right: 4px;
+  }
+
+  .btn-book {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+  }
+
+  .btn-book:hover {
+    background-color: #157347;
+  }
+</style>
+
+<!-- Search Result Header -->
+<div class="container my-5">
+  <div class="bus-header mb-5">
+    <h2>🚍 Your Bus Search Results</h2>
+    <p>These buses match your route and travel time preferences.</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Static Card 1 -->
+    <div class="col">
+      <div class="card bus-card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">Express Bus</h5>
+          <p class="mb-2">
+            <i class="bi bi-clock bus-icon"></i> <strong>Departure:</strong> 10:00 AM<br>
+            <i class="bi bi-clock-history bus-icon"></i> <strong>Arrival:</strong> 2:00 PM
+          </p>
+          <p><strong>Price:</strong> $25</p>
+          <p><strong>Seats Available:</strong> 15</p>
+          <div class="d-grid">
+            <a href="#" class="btn btn-success btn-book">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Static Card 2 -->
+    <div class="col">
+      <div class="card bus-card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">Luxury Coach</h5>
+          <p class="mb-2">
+            <i class="bi bi-clock bus-icon"></i> <strong>Departure:</strong> 11:00 AM<br>
+            <i class="bi bi-clock-history bus-icon"></i> <strong>Arrival:</strong> 3:00 PM
+          </p>
+          <p><strong>Price:</strong> $35</p>
+          <p><strong>Seats Available:</strong> 10</p>
+          <div class="d-grid">
+            <a href="#" class="btn btn-success btn-book">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Static Card 3 -->
+    <div class="col">
+      <div class="card bus-card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">City Liner</h5>
+          <p class="mb-2">
+            <i class="bi bi-clock bus-icon"></i> <strong>Departure:</strong> 12:00 PM<br>
+            <i class="bi bi-clock-history bus-icon"></i> <strong>Arrival:</strong> 4:00 PM
+          </p>
+          <p><strong>Price:</strong> $20</p>
+          <p><strong>Seats Available:</strong> 20</p>
+          <div class="d-grid">
+            <a href="{% url 'bus_details' %}" class="btn btn-success btn-book">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

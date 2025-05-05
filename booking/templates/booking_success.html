@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}<title>Booking Success</title>{% endblock %}
+
+{% block content %}
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Booking Success Styles -->
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+  }
+
+  .success-box {
+    max-width: 600px;
+    margin: 5rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .success-box h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    animation: popIn 0.5s ease-in-out;
+  }
+
+  .success-box p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #e6e6e6;
+  }
+
+  .btn-home {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-home:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<!-- Success Content -->
+<div class="success-box">
+  <h1>🎉 Booking Successful!</h1>
+  <p>Thank you! Your seat has been booked successfully.</p>
+  <a href="{% url 'booking_history' %}" class="btn btn-success btn-home">View Booking History</a>
+</div>
+{% endblock %}

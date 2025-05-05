@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}<title>Booking Failed</title>{% endblock %}
+
+{% block content %}
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Booking Failed Styles -->
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    color: #fff;
+  }
+
+  .fail-box {
+    max-width: 600px;
+    margin: 5rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .fail-box h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    animation: popIn 0.5s ease-in-out;
+  }
+
+  .fail-box p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff7f7;
+  }
+
+  .btn-retry {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-retry:hover {
+    background-color: #bd2130;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<!-- Failure Content -->
+<div class="fail-box">
+  <h1>❌ Booking Failed</h1>
+  <p>Sorry! Something went wrong while booking your seat.</p>
+  <a href="index.html" class="btn btn-danger btn-retry">Try Again</a>
+</div>
+{% endblock %}

@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {%block title %}
+    <title>Bus Booking - Home</title>
+    {% endblock %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .hover-link:hover {
+            color: #0d6efd !important;
+            /* Bootstrap primary color */
+            text-decoration: underline;
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+        }
+
+        .search-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-form .form-control {
+            margin-bottom: 15px;
+        }
+
+        .card {
+            height: 90%;
+            /* Reduce height */
+            max-width: 90%;
+            /* Limit width */
+            margin: auto;
+            /* Center the cards */
+        }
+
+        .card-img-top {
+            height: 180px;
+            /* Adjust image height */
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            /* Ensure text stays within the card */
+            text-overflow: ellipsis;
+            /* Add ellipsis for overflowing text */
+            white-space: nowrap;
+            /* Prevent text wrapping */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .trending-offers {
+            margin-bottom: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="/">🚍 Bus Booking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="{% url 'booking_history' %}">Booking History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="{% url 'contact_us' %}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-semibold hover-link" href="faqs.html">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <!-- Company Info -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Bus Booking</h5>
+                    <p>
+                        Your trusted partner for comfortable and secure bus travel across the country.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Home</a></p>
+                    <p><a href="login.html" class="text-white text-decoration-none">Login</a></p>
+                    <p><a href="signup.html" class="text-white text-decoration-none">Sign Up</a></p>
+                    <p><a href="contact.html" class="text-white text-decoration-none">Contact</a></p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home me-3"></i> 123 Bus Lane, City, Country</p>
+                    <p><i class="fas fa-envelope me-3"></i> support@busbooking.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +123 456 7890</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3 text-center">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow us</h5>
+                    <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4" />
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>&copy; 2025 Bus Booking. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

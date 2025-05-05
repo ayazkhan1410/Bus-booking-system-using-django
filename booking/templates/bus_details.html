@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}<title>Bus Details</title>{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <!-- Bus Info Header -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80"
+           class="img-fluid rounded shadow" alt="Luxury Coach">
+    </div>
+    <div class="col-md-6">
+      <h2 class="fw-bold text-primary">Luxury Coach</h2>
+      <p class="mb-1"><i class="bi bi-geo-alt text-success"></i> <strong>From:</strong> Bahawalpur</p>
+      <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger"></i> <strong>To:</strong> Lahore</p>
+      <p class="mb-1"><i class="bi bi-clock text-info"></i> <strong>Departure:</strong> 11:00 AM</p>
+      <p><i class="bi bi-clock-history text-warning"></i> <strong>Arrival:</strong> 4:00 PM</p>
+      <span class="badge bg-success fs-6 p-2">Price: $35</span>
+    </div>
+  </div>
+
+<!-- Seat Map -->
+<!-- Seat Map with Numbered Labels -->
+<div class="bg-light p-4 rounded-4 shadow mb-5">
+    <h4 class="text-success fw-semibold mb-3">🪑 Choose Your Seats</h4>
+    <div class="row row-cols-4 g-3 text-center">
+  
+      <!-- Static Numbered Seats 1-40 -->
+      <div class="col"><button class="btn btn-outline-success w-100 py-2">1</button></div>
+      <div class="col"><button class="btn btn-outline-success w-100 py-2">2</button></div>
+      <div class="col"><button class="btn btn-outline-success w-100 py-2">3</button></div>
+      <div class="col"><button class="btn btn-outline-success w-100 py-2">4</button></div>
+      <!-- Repeat similar blocks up to seat 40 -->
+      <div class="col"><button class="btn btn-outline-success w-100 py-2">40</button></div>
+  
+      <!-- Example Selected and Booked -->
+      <div class="col"><button class="btn btn-success w-100 py-2">13</button></div> <!-- selected -->
+      <div class="col"><button class="btn btn-danger w-100 py-2" disabled>21</button></div> <!-- booked -->
+  
+    </div>
+  
+    <!-- Legend -->
+    <div class="mt-4">
+      <span class="badge bg-success me-2">Selected</span>
+      <span class="badge border border-success text-success me-2">Available</span>
+      <span class="badge bg-danger">Booked</span>
+    </div>
+  </div>
+  
+  
+ <!-- Passenger Info Section -->
+<div class="bg-white p-4 rounded-4 shadow">
+    <h4 class="fw-bold text-primary mb-4">👤 Passenger Details</h4>
+  
+    <!-- Passenger 1 -->
+    <div class="passenger-form mb-4 border rounded p-3 bg-light-subtle">
+      <h5 class="fw-semibold mb-3">Passenger 1</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control form-control-lg" placeholder="Full Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control form-control-lg" placeholder="Seat Number" value="A1" readonly>
+        </div>
+      </div>
+    </div>
+  
+    <!-- "Add Another Passenger" Button -->
+    <div class="text-end mb-4">
+      <button type="button" class="btn btn-outline-primary btn-sm shadow-sm">
+        <i class="bi bi-person-plus-fill me-1"></i> Add Another Passenger
+      </button>
+    </div>
+  
+    <div class="d-grid">
+      <button class="btn btn-success btn-lg shadow-sm">✅ Confirm Booking</button>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

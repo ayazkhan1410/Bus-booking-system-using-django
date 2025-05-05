@@ -1,0 +1,66 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f1e4; 
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background: linear-gradient(135deg, #6c757d, #495057); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+footer {
+  background: #495057; 
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.card {
+  height: 100%;
+}
+
+/* Add hover effect to testimonials */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center;
+  text-align: center;
+}
+
+.card-body .text-warning {
+  margin-top: auto; /* Push stars to the middle */
+  margin-bottom: 10px; /* Add spacing below stars */
+}
+    
+/* Align stars consistently */
