@@ -1,5 +1,16 @@
 from django.urls import path
-from .views import *
+from .views import (
+    IndexView,
+    ContactUsView,
+    SearchResultsView,
+    BusDetailsView,
+    BookingHistoryView,
+    BookingSuccessView,
+    BookingFailedView,
+    LoginView,
+    RegisterView,
+    LogoutView
+)
 
 
 urlpatterns = [
