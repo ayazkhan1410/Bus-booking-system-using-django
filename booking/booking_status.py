@@ -3,4 +3,3 @@ BOOKING_STATUS = {
     'confirmed': 'Confirmed',
     'cancelled': 'Cancelled',
 }
-
