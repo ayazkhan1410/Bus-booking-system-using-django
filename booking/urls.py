@@ -10,7 +10,7 @@ urlpatterns = [
     path("booking-history/", BookingHistoryView.as_view(), name="booking_history"),
     path("booking-success/", BookingSuccessView.as_view(), name="booking_success"),
     path("booking-failed/", BookingFailedView.as_view(), name="booking_failed"),
-    
+
     # Authentication URLs
     path("login/", LoginView.as_view(), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
